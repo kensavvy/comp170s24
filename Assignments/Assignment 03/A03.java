@@ -2,7 +2,7 @@ public class A03 {
     public static void main(String[] args) {
         // Daily temperatures for June
         int[] june = {
-            72, 74, 68, 70, 75, 77, 80, 79, 65, 68,
+            -72, 74, 68, 70, 75, 77, 80, 79, 65, 68,
             72, 74, 76, 78, 70, 72, 75, 77, 74, 76,
             73, 75, 72, 74, 78, 80, 75, 77, 72, 70
         };
