@@ -2,7 +2,7 @@ public class A03 {
     public static void main(String[] args) {
         // Daily temperatures for June
         int[] june = {
-            -72, 74, 68, 70, 75, 77, 80, 79, 65, 68,
+            72, 74, 68, 70, 75, 77, 80, 79, 65, 68,
             72, 74, 76, 78, 70, 72, 75, 77, 74, 76,
             73, 75, 72, 74, 78, 80, 75, 77, 72, 70
         };
@@ -36,7 +36,10 @@ public class A03 {
      */
     public static int countOf(int[] array, int target) {
         int count = 0;
-        return count;
+        for (int i = 0, i < array.length, i = i + 1);
+            if(array[i] = target)
+                count = count + 1;
+            return count;
     } // method countOf
 
     /**
@@ -46,6 +49,9 @@ public class A03 {
      */
     public static int findMax(int[] array) {
         int max = array[0];
+        for (int i = 0, i < array.length, i = i + 1);
+            if(array[i] > max)
+                max = array[i];
         return max;
     } // method findMax
 
@@ -56,6 +62,9 @@ public class A03 {
      */
     public static int findMin(int[] array) {
         int min = array[0];
+        for (int i = 0, i < array.length, i = i + 1);
+            if(array[i] < min)
+                min = array[i];
         return min;
     } // method findMin
 
