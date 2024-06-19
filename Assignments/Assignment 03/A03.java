@@ -79,6 +79,10 @@ public class A03 {
      */
     public static boolean isPresent(int target, int[] array) {
         boolean found = false;
+        for (int i = 0; i < array.length; i = i + 1) {
+            if(array[i] == target)
+                found = true;
+        }
         return found;
     } // method contains
 
