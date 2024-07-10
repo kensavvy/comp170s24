@@ -21,36 +21,35 @@ public class A06 {
             System.out.println("Guess a number between 0 and 99. Enter -1 to quit: "); 
         // ask user to enter integer number or terminate program
 
-            try {
+            if(sc.hasNextInt()) {
                 guessNumber = sc.nextInt();
-            // execute code and continue if there are no erroneous inputs
+            // if user input is an integer, continue checking against requirements
 
-            } catch(Exception e) {
-                System.out.println(e);
-                sc.nextLine();
-            // if an error occurs, catch it and print it, then prompt user to continue guessing (prevents infinite loop when non-integer is entered)
+                if(guessNumber == -1) {
+                    System.out.println("You have quit the game.");
+                // user enters -1 to quit the game
 
-            } // close try-catch
+                } else if(guessNumber < 0 || guessNumber > 99) {
+                    System.out.println("You have guessed a number out of bounds. Please enter an integer from 0 to 99.");
+                // user guesses a number that is not between 0 and 99
 
-            if(guessNumber == -1) {
-                System.out.println("You have quit the game.");
-            // user enters -1 to quit the game
+                } else if(guessNumber < randomNumber) {
+                    System.out.println("You have guessed a number too small. Try again!");
+                // user guesses a number that is smaller than the random number
 
-            } else if(guessNumber < 0 || guessNumber > 99) {
-                System.out.println("You have guessed a number out of bounds. Please enter an integer from 0 to 99.");
-            // user guesses a number that is not between 0 and 99
+                } else if(guessNumber > randomNumber) {
+                    System.out.println("You have guessed a number too large. Try again!");
+                // user guesses a number that is larger than the random number
 
-            } else if(guessNumber < randomNumber) {
-                System.out.println("You have guessed a number too small. Try again!");
-            // user guesses a number that is smaller than the random number
-
-            } else if(guessNumber > randomNumber) {
-                System.out.println("You have guessed a number too large. Try again!");
-            // user guesses a number that is larger than the random number
-
+                } else {
+                    System.out.println("You have guessed the correct number!");
+                // whiler user input is an integer, if all other requirements fail, then user guesses the random number
+                }
+                
             } else {
-                System.out.println("You have guessed the correct number!");
-            // user guesses the random number
+                System.out.println("You have enetered an invalid input.");
+                sc.nextLine();
+            // if user input is not an integer, print error message, then prompt user to continue guessing (prevents infinite loop)
             }
 
         }
